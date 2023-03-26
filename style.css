@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+/* NEEDS */
+body {
+    background: url(assets/background.webp);
+    margin: 0 auto
+}
+
+/* MAIN PART */
+.main__picture img {
+    max-width: 700px;
+    width: 100%;
+}
+
+.main__content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text__container {
+    width: 400px;
+    opacity: 0;
+    transition: 0.8s ease-in-out 0s;
+    transition-delay: 0.3s;
+    transform: translate(0, 5%);
+}
+
+
+.main__picture {
+    opacity: 0;
+    transition: 0.8s ease-in-out 0s;
+    transition-delay: 0.3s;
+    transform: translate(0, 5%);
+}
+
+.element-animation.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
+}
+
+
+/* SECOND CONTAINER */
+.second__container {
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    transition: 0.8s ease-in-out 0s;
+    transition-delay: 0.3s;
+    transform: translate(0, 5%);
+}
+
+.second__container p {
+    width: 400px;
+}
+
+/* THIRD CONTAINER */
+.third__container {
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    transition: 0.8s ease-in-out 0s;
+    transition-delay: 0.3s;
+
+}
+
+.third__container p {
+    width: 400px;
+}
+
+@media (max-width: 500px) {
+    .main__content {
+        width: 320px;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text__container {
+        width: 320px;
+    }
+
+    .second__container img {
+
+        max-width: 320px;
+        width: 100%;
+
+    }
+
+    .second__container {
+        flex-direction: column;
+    }
+
+    .second__container p {
+        width: 320px;
+    }
+
+    .third__container {
+
+        max-width: 320px;
+        width: 100%;
+        flex-direction: column;
+
+    }
+
+    .third__container img {
+        width: 320px;
+    }
+
+    .third__container p {
+        width: 320px;
+    }
+}
+
+@media (max-width: 800px) {
+    .main__content {
+        flex-direction: column;
+    }
+
+    .text__container {
+        width: 608px;
+
+    }
+
+    .second__container {
+        flex-direction: column;
+    }
+
+    .second__container p {
+        width: 608px
+    }
+
+    .third__container {
+        flex-direction: column;
+    }
+
+    .third__container p {
+        width: 608px;
+    }
+}
